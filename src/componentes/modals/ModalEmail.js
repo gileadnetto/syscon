@@ -17,7 +17,7 @@ const  DialogDemo = ({idContext, title, subtitle = ''}) => {
 
     useEffect( async () => {
 
-        const response = await fetch(`http://192.168.1.86:4000/emails/unidade/${idContext}`)
+        const response = await fetch(`${process.env.LINK_API}/emails/unidade/${idContext}`)
         const dadosCobrancas = await response.json();
 
         setItens(dadosCobrancas);

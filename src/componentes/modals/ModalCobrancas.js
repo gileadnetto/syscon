@@ -16,7 +16,7 @@ const  ModalCobrancasUnidade = ({idContext, title, subtitle = ''}) => {
 
     useEffect( async () => {
 
-        const response = await fetch(`http://192.168.1.86:4000/cobrancas/unidade/${idContext}`)
+        const response = await fetch(`${process.env.LINK_API}/cobrancas/unidade/${idContext}`)
         const dadosCobrancas = await response.json();
 
         setItens(dadosCobrancas);

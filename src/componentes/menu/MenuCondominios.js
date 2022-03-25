@@ -22,6 +22,10 @@ const MenuContainer = styled.div`
         color: white ;
         margin-top: 50px ;
     }
+
+    .p-menuitem-text{
+        color: white !important; 
+    }
     
 
   @media only screen and (max-width: 800px) {
@@ -37,11 +41,7 @@ export default function MenuCondominios() {
     const [items, setItems] = useState([]);
     const [carregando, setCarregando] = useState(true);
 
-    console.log('LINK_API', process.env.LINK_API);
-
-
     useEffect( async () => {
-
    
         const response = await fetch(process.env.LINK_API+'/condominios')
         const condominios = await response.json();
