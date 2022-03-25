@@ -40,27 +40,27 @@ export default function Locatarios({locatarios}){
         return <p>Carregando....</p>
     }
 
-    const [loading, setLoading] = useState(false);
+    // const [loading, setLoading] = useState(false);
 
-    const onRouteChangeStart = React.useCallback(() => {
-        setLoading(true);
-    }, []);
+    // const onRouteChangeStart = React.useCallback(() => {
+    //     setLoading(true);
+    // }, []);
 
-    const onRouteChangeDone = React.useCallback(() => {
-        setLoading(false);
-      }, []);
+    // const onRouteChangeDone = React.useCallback(() => {
+    //     setLoading(false);
+    //   }, []);
 
-    React.useEffect(() => {
-    router.events.on('routeChangeStart', onRouteChangeStart);
-    router.events.on('routeChangeComplete', onRouteChangeDone);
-    router.events.on('routeChangeError', onRouteChangeDone);
+    // React.useEffect(() => {
+    // router.events.on('routeChangeStart', onRouteChangeStart);
+    // router.events.on('routeChangeComplete', onRouteChangeDone);
+    // router.events.on('routeChangeError', onRouteChangeDone);
 
-    return () => {
-        router.events.off('routeChangeStart', onRouteChangeStart);
-        router.events.off('routeChangeComplete', onRouteChangeDone);
-        router.events.off('routeChangeError', onRouteChangeDone);
-    };
-    }, [router.events]);
+    // return () => {
+    //     router.events.off('routeChangeStart', onRouteChangeStart);
+    //     router.events.off('routeChangeComplete', onRouteChangeDone);
+    //     router.events.off('routeChangeError', onRouteChangeDone);
+    // };
+    // }, [router.events]);
 
     const renderLocatarios = () => {
         let render = [];
@@ -148,13 +148,17 @@ export default function Locatarios({locatarios}){
                             </div>
 
                             <Divider />
-                        { loading ?  
+                        {/* { loading ?  
                             <p style={{width:'100%'}}>carregando</p>
                                 :
                             <div>
                                 {renderLocatarios()}
                             </div>
-                         }
+                         } */}
+
+                            <div>
+                                {renderLocatarios()}
+                            </div>
                 </div>
 
             </HolderApp>
