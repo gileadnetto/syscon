@@ -8,7 +8,8 @@ import Button from '@mui/material/Button';
 import InputAdornment from '@mui/material/InputAdornment';
 import TextField from '@mui/material/TextField';
 import SearchIcon from '@mui/icons-material/Search';
-import { DataTable, Column } from 'primereact/datatable';
+import { DataTable } from 'primereact/datatable';
+import { Column } from 'primereact/column';
 import { Divider } from 'primereact/divider';
 import ModalCobrancasUnidade from '../../componentes/modals/ModalCobrancas'
 import ModalEmail from '../../componentes/modals/ModalEmail'

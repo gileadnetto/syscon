@@ -8,7 +8,7 @@ module.exports = withPWA({
   },
   reactStrictMode: true,
   env: {
-    LINK_API:"http://189.113.73.8:8594/"
+    LINK_API:"http://189.113.73.8:8594"
   },
 });
 
