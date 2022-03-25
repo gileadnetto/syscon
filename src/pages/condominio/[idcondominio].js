@@ -40,28 +40,7 @@ export default function Locatarios({locatarios}){
         return <p>Carregando....</p>
     }
 
-    // const [loading, setLoading] = useState(false);
-
-    // const onRouteChangeStart = React.useCallback(() => {
-    //     setLoading(true);
-    // }, []);
-
-    // const onRouteChangeDone = React.useCallback(() => {
-    //     setLoading(false);
-    //   }, []);
-
-    // React.useEffect(() => {
-    // router.events.on('routeChangeStart', onRouteChangeStart);
-    // router.events.on('routeChangeComplete', onRouteChangeDone);
-    // router.events.on('routeChangeError', onRouteChangeDone);
-
-    // return () => {
-    //     router.events.off('routeChangeStart', onRouteChangeStart);
-    //     router.events.off('routeChangeComplete', onRouteChangeDone);
-    //     router.events.off('routeChangeError', onRouteChangeDone);
-    // };
-    // }, [router.events]);
-
+    
     const renderLocatarios = () => {
         let render = [];
     
@@ -87,11 +66,6 @@ export default function Locatarios({locatarios}){
                 );
             }
                        
-            //            <div className="img-profile"><img src={`https://avatars.dicebear.com/api/avataaars/${locatario.dsqualificacao}.svg`} width={60}></img></div>
-            //             {/* <div className="img-profile"><img src={`https://avatars.dicebear.com/api/adventurer-neutral/${locatario.dsqualificacao}.svg`} width={60}></img></div> */}
-            //             {/* <div className="img-profile"><img src={`https://avatars.dicebear.com/api/initials/${locatario.dsqualificacao}.svg`} width={60}></img></div> */}
-            //            
-
             render.push(
             <DataTable key={"locs1"} value={filtrado} size="small" responsiveLayout="scroll">
                 <Column field="cdchamada" header="Apt." body={ locatario => <p>{locatario?.cdchamada}</p> } sortable></Column>
@@ -132,33 +106,25 @@ export default function Locatarios({locatarios}){
             <HolderApp>
                 <div>
                    
-                            <div style={{margin: ".4rem 0 1rem"}}>
-                                <TextField
-                                    autoComplete="off"
-                                    style={{maxWidth:'90vw'}}
-                                    label="Buscar"
-                                    id="standard-start-adornment"
-                                    size="small"
-                                    sx={{ m: 1, width: '500px' }}
-                                    InputProps={{
-                                        endAdornment: <InputAdornment position="start"><SearchIcon /></InputAdornment>,
-                                    }}
-                                    onChange={(e) => setfiltro(e.target.value)}
-                                />
-                            </div>
+                        <div style={{margin: ".4rem 0 1rem"}}>
+                            <TextField
+                                autoComplete="off"
+                                style={{maxWidth:'90vw'}}
+                                label="Buscar"
+                                id="standard-start-adornment"
+                                size="small"
+                                sx={{ m: 1, width: '500px' }}
+                                InputProps={{
+                                    endAdornment: <InputAdornment position="start"><SearchIcon /></InputAdornment>,
+                                }}
+                                onChange={(e) => setfiltro(e.target.value)}
+                            />
+                        </div>
 
-                            <Divider />
-                        {/* { loading ?  
-                            <p style={{width:'100%'}}>carregando</p>
-                                :
-                            <div>
-                                {renderLocatarios()}
-                            </div>
-                         } */}
-
-                            <div>
-                                {renderLocatarios()}
-                            </div>
+                        <Divider />
+                        <div>
+                            {renderLocatarios()}
+                        </div>
                 </div>
 
             </HolderApp>
