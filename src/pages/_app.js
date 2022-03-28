@@ -44,9 +44,9 @@ const  MyApp = ({ Component, pageProps }) => {
         <MenuLateral/>
         {/* <MenuCondominios /> */}
         <GlobalStyle />
-        {/* <AppConteiner>
+        <AppConteiner>
           <Component {...pageProps} />
-        </AppConteiner> */}
+        </AppConteiner>
     </ThemeProvider>
    
   ) 
