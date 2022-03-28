@@ -3,6 +3,7 @@ import theme from "../styles/theme"
 import {ThemeProvider} from 'styled-components'
 import { useEffect } from "react"
 import Menu from '../componentes/menu/Menu'
+import MenuLateral from "../componentes/menu/MenuLateral"
 import MenuCondominios from '../componentes/menu/MenuCondominios'
 import {AppConteiner} from '../componentes/utils'
 
@@ -40,12 +41,12 @@ const  MyApp = ({ Component, pageProps }) => {
 
   return (
     <ThemeProvider theme={theme}>
-        <Menu/>
-        <MenuCondominios />
+        <MenuLateral/>
+        {/* <MenuCondominios /> */}
         <GlobalStyle />
-        <AppConteiner>
+        {/* <AppConteiner>
           <Component {...pageProps} />
-        </AppConteiner>
+        </AppConteiner> */}
     </ThemeProvider>
    
   ) 
